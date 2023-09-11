@@ -52,7 +52,7 @@ Clone o repositório usando ``` git clone https://www.github.com/victorchryz/tes
 3.  Instale os requisitos executando o seguinte comando:
 
 ```bash
-pip install -r requirements.txt
+pip install --upgrade --no-cache-dir -r requirements.txt
 ```
 
 4.  Faça migrações executando:
