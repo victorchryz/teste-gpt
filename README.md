@@ -4,7 +4,7 @@ Teste-GPT é um clone do Chat GPT utilizando Django com modelo GPT-3.5 da OpenAI
 
 ## Instalação
 Clone o repositório usando ``` git clone https://www.github.com/victorchryz/teste-gpt.git``` ou baixe o código do repositório para o seu computador local e extraia-o.
-> [!IMPORTANTE]
+> [IMPORTANTE]
 > 1. **Eu incentivo o uso de ambientes virtuais para separar as dependências do projeto dos pacotes locais. Leia mais sobre ambientes virtuais [aqui](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/).**
 >  - Primeiro, certifique-se de ter o [python](https://www.python.org/) instalado em sua máquina local, pois você usará o [Python Package Installer (PIP)](https://pypi.org/project/pip/) para instalar as dependências do projeto.
    - Instale seu ambiente virtual usando
@@ -71,3 +71,18 @@ Solicitações pull são bem-vindas. Para mudanças importantes, abra primeiro u
 Certifique-se de atualizar os testes conforme apropriado.
 
 Para obter mais informações sobre a API usada, leia [isto](https://platform.openai.com/docs/api-reference).
+
+## Créditos & Agradecimentos
+
+Este projeto foi baseado em [test-gpt](https://github.com/s41ntm4rt1n/test-gpt),
+Deixo aqui uma imensa gratidão ao [BRIANMARTIN](https://github.com/s41ntm4rt1n) por te dado início à este projeto.
+
+## Contribuição
+Contribuições são bem-vindas! Se você tiver sugestões, correções de bugs ou melhorias para este projeto, fique à vontade para abrir uma issue ou enviar um pull request.
+
+Certifique-se de atualizar os testes conforme apropriado.
+
+Para obter mais informações sobre a API usada, leia [isto](https://platform.openai.com/docs/api-reference).
+
+## Licença
+O projeto original não especifica nenhuma licença, isso significa que ele está em um estado de "todos os direitos reservados" por padrão.
