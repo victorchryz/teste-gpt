@@ -64,18 +64,6 @@ API_KEY= #Sua OpenAI API key.
 ou
 
 Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da conta e atualize sua API Key.
-## Contribuindo
-
-Solicitações pull são bem-vindas. Para mudanças importantes, abra primeiro uma edição para discutir o que você gostaria de mudar. Estou aberto à colaboração no mesmo assunto ou em outros projetos Python - AI.
-
-Certifique-se de atualizar os testes conforme apropriado.
-
-Para obter mais informações sobre a API usada, leia [isto](https://platform.openai.com/docs/api-reference).
-
-## Créditos & Agradecimentos
-
-Este projeto foi baseado em [test-gpt](https://github.com/s41ntm4rt1n/test-gpt),
-Deixo aqui uma imensa gratidão ao [BRIANMARTIN](https://github.com/s41ntm4rt1n) por te dado início à este projeto.
 
 ## Contribuição
 Contribuições são bem-vindas! Se você tiver sugestões, correções de bugs ou melhorias para este projeto, fique à vontade para abrir uma issue ou enviar um pull request.
@@ -84,5 +72,7 @@ Certifique-se de atualizar os testes conforme apropriado.
 
 Para obter mais informações sobre a API usada, leia [isto](https://platform.openai.com/docs/api-reference).
 
-## Licença
-O projeto original não especifica nenhuma licença, isso significa que ele está em um estado de "todos os direitos reservados" por padrão.
+## Créditos & Agradecimentos
+
+Este projeto foi baseado em [test-gpt](https://github.com/s41ntm4rt1n/test-gpt),
+Deixo aqui uma imensa gratidão ao [BRIANMARTIN](https://github.com/s41ntm4rt1n) pela enorme contribuição para o início deste projeto.
