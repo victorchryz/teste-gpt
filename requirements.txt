@@ -1,25 +1,3 @@
-# Antes de executar o script em sua máquina.
-# Ative o ambiente virtual:
-
-# Linux:
-# ```bash
-# source venv/bin/activate
-# ```
-
-#Certifique-se de ter o pip instalado em sua máquina antes de executar os comandos abaixo instalando/atualizando os pacotes(módulos) do python executando o seguinte comando no terminal:
-
-# ```bash
-# python3 -m pip install --upgrade wheel pip 
-# ```
-
-# E depois execute:
-
-# ```bash
-# pip install -r requirements.txt
-# ```
-
-# Isso irá instalar todos os pacotes listados no arquivo requirements.txt. 
-
 aiohttp
 aiosignal
 asgiref
