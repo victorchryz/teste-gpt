@@ -12,32 +12,50 @@ Clone o repositório usando ``` git clone https://www.github.com/victorchryz/tes
        <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows" title="Windows"/></code> **Windows**
        
         ```bash
-        python -m venv env  
+        python -m venv venv
         ```
         <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884153-99edc188-e4aa-4c84-91b0-e2df260ebc33.png" alt="Ubuntu" title="Ubuntu"/></code> **Linux**
 
         ```bash
-        python3 -m venv env
+        sudo apt install virtualenv
+        ```
+      e
+
+        ```bash
+        python3 -m venv venv
         ```
 - Ative o ambiente virtual usando:
        
      <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows" title="Windows"/></code> **Windows**
 
      ```bash
-     env\Scripts\activate
+     venv\Scripts\activate
      ```
      <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884153-99edc188-e4aa-4c84-91b0-e2df260ebc33.png" alt="Ubuntu" title="Ubuntu"/></code> **Linux**
      
      ```bash
-     source env/bin/activate
+     source venv/bin/activate
      ```
-2.  Instale os requisitos executando o seguinte comando:
+2. Antes de executar os comandos abaixo, instale e/ou atualize os módulos pip e wheel do python executando o seguinte comando no terminal:
+
+     <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows" title="Windows"/></code> **Windows**
+
+      ```bash
+      python -m pip install --upgrade wheel pip 
+      ```
+     <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884153-99edc188-e4aa-4c84-91b0-e2df260ebc33.png" alt="Ubuntu" title="Ubuntu"/></code> **Linux**
+     
+      ```bash
+      python3 -m pip install --upgrade wheel pip 
+      ```
+
+3.  Instale os requisitos executando o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3.  Faça migrações executando:
+4.  Faça migrações executando:
 ```bash
 python manage.py makemigrations
 ```
@@ -48,7 +66,7 @@ ou
 python manage.py migrate
 ```
 
-4. Execute o servidor local usando:
+5. Execute o servidor local usando:
 
 ```bash
 python manage.py runserver
