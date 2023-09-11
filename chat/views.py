@@ -124,7 +124,7 @@ def send_message(request, chat_slug):
             }
             
             return JsonResponse(response_data)
-    return JsonResponse({'error': 'Pedido inválido'})#retorno redirecionamento('chat:chat', chat_id=chat_id)
+    return JsonResponse({'error': 'Pedido inválido'})#return redirect('chat:chat', chat_id=chat_id)
 
 	
 def new_chat(request):
@@ -156,7 +156,7 @@ def login(request):
             auth.login(request, user)
             existing_chats = Chat.objects.filter(user=user)
             if existing_chats.exists():
-                chat = Chat.objects.first()#recebe_objeto_ou_404(Chat, user=request.user)
+                chat = Chat.objects.first()#get_object_or_404(Chat, user=request.user)
                 return redirect('chat:chat', chat_slug=chat.slug)
             else:
                 chat = Chat.objects.create(user=request.user)
@@ -205,7 +205,7 @@ def signup(request):
                 else:
                     chat = Chat.objects.create(user=request.user)
                     return redirect('chat:chat', chat_slug=chat.slug)
-                    #retorna redirecionamento('chat:index' )
+                    #return redirect('chat:index' )
             except:
                 error_message = 'Error creating account!!'
                 context = {
