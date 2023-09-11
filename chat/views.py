@@ -19,18 +19,18 @@ def save_api_key(request, chat_slug):
     if request.method == "POST":
         form = ApiKeyForm(request.POST)
         if form.is_valid():
-            api_key = form.cleaned_data["api_key"]
+            openai_api_key = form.cleaned_data["openai_api_key"]
             env_file = settings.BASE_DIR / 'chatbot'/'.env'
             try:
                 with open(env_file, 'r') as fp:
                     while True:
                         cur_line = fp.readline()
-                        if cur_line == 'API_KEY=':
+                        if cur_line == 'OPENAI_API_KEY=':
                             with open(env_file, 'a') as file:
-                                file.write(api_key)
+                                file.write(openai_api_key)
                             break
             except Exception as e:
-                print(f"Error while saving API key: {e}")
+                print(f"Erro ao salvar OPENAI_API_KEY: {e}")
             return redirect("chat:chat", chat_slug=chat.slug)  
     else:
         form = ApiKeyForm()
@@ -38,10 +38,10 @@ def save_api_key(request, chat_slug):
     return render(request, "sidebar.html.html", {"form": form})
 
 
-openai.api_key = env('API_KEY')
+openai.openai_api_key = env('OPENAI_API_KEY')
 
 def welcome(request):
-    return render(request, 'welcome.html')
+    return render(request, 'bem-vindo.html')
 
 
 
@@ -49,7 +49,7 @@ def chat_openai(message):
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a rogue assistant."},
+            {"role": "system", "content": "Você é um assistente ético e prestativo."},
             {"role": "user", "content": message},
         ]
     )
@@ -85,7 +85,7 @@ class ChatListView(ListView):
  
 class ChatDetailView(DetailView):
     model = Chat
-    template_name='chat_detail.html'
+    template_name='chat-detalhes.html'
     
     def get_object(self):
         chat_slug = self.kwargs['chat_slug']
@@ -94,7 +94,7 @@ class ChatDetailView(DetailView):
     
     def post(self, request, *args, **kwargs):
         chat = self.get_object()
-        message = request.POST.get('message')  # Assuming your form field is named 'message'
+        message = request.POST.get('message')  # Supondo que o campo do seu formulário seja denominado 'message'
         if message:
             response = process_user_message(message)
             message = Message(chat=chat, message=message, response=response)
@@ -120,11 +120,11 @@ def send_message(request, chat_slug):
             message.save()
             response_data = {
                 'response': response,
-                'created_at': message.created_at.strftime('%Y-%m-%d %H:%M:%S')  # Format the timestamp
+                'created_at': message.created_at.strftime('%Y-%m-%d %H:%M:%S')  #Formate data/hora
             }
             
             return JsonResponse(response_data)
-    return JsonResponse({'error': 'Invalid request'})#return redirect('chat:chat', chat_id=chat_id)
+    return JsonResponse({'error': 'Pedido inválido'})#retorno redirecionamento('chat:chat', chat_id=chat_id)
 
 	
 def new_chat(request):
@@ -156,7 +156,7 @@ def login(request):
             auth.login(request, user)
             existing_chats = Chat.objects.filter(user=user)
             if existing_chats.exists():
-                chat = Chat.objects.first()#get_object_or_404(Chat, user=request.user)
+                chat = Chat.objects.first()#recebe_objeto_ou_404(Chat, user=request.user)
                 return redirect('chat:chat', chat_slug=chat.slug)
             else:
                 chat = Chat.objects.create(user=request.user)
@@ -205,7 +205,7 @@ def signup(request):
                 else:
                     chat = Chat.objects.create(user=request.user)
                     return redirect('chat:chat', chat_slug=chat.slug)
-                    #return redirect('chat:index' )
+                    #retorna redirecionamento('chat:index' )
             except:
                 error_message = 'Error creating account!!'
                 context = {
