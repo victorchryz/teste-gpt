@@ -1,13 +1,13 @@
-# TestGPT
+# Teste-GPT
 
-TestGPT is a Django Chat GPT clone using OpenAI's gpt-3.5 model.
+Teste-GPT é um clone do Chat GPT utilizando Django com modelo GPT-3.5 da OpenAI.
 
-## Installation
-Clone this repository using ``` git clone https://www.github.com/s41ntm4rt1n/test-gpt.git``` or download the repo code to your local computer and extract it.
-> [!IMPORTANT]
-> 1. **I encourage the use of virtual environments to separate project dependencies from local packages. Read  more about virtual environments [here](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/).**
->  - First ensure you have [python](https://www.python.org/) installed in your local machine since you will be using [Python Package Installer (PIP)](https://pypi.org/project/pip/) to install project dependencies.
-   - Install your virtual environment using
+## Instalação
+Clone o repositório usando ``` git clone https://www.github.com/victorchryz/teste-gpt.git``` ou baixe o código do repositório para o seu computador local e extraia-o.
+> [!IMPORTANTE]
+> 1. **Eu incentivo o uso de ambientes virtuais para separar as dependências do projeto dos pacotes locais. Leia mais sobre ambientes virtuais [aqui](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/).**
+>  - Primeiro, certifique-se de ter o [python](https://www.python.org/) instalado em sua máquina local, pois você usará o [Python Package Installer (PIP)](https://pypi.org/project/pip/) para instalar as dependências do projeto.
+   - Instale seu ambiente virtual usando
     
        <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows" title="Windows"/></code> **Windows**
        
@@ -18,7 +18,7 @@ Clone this repository using ``` git clone https://www.github.com/s41ntm4rt1n/tes
         ```
         python3 -m venv env
         ```
-- Activate the virtual environment using:
+- Ative o ambiente virtual usando:
        
      <code><img width="10" src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows" title="Windows"/></code> **Windows**
      ```
@@ -28,42 +28,41 @@ Clone this repository using ``` git clone https://www.github.com/s41ntm4rt1n/tes
      ```
      source env/bin/activate
     ```
-2.  Install the requirements by running on the command line:
+2.  Instale os requisitos executando o seguinte comando:
 ```bash
 pip install -r requirements.txt
 ```
 
-3.  Make migrations by running:
+3.  Faça migrações executando:
 ```bash
 python manage.py makemigrations
 
 ```
-then:
+Ou:
 ```bash
 python manage.py migrate
 ```
 
-4. Run the local server using:
+4. Execute o servidor local usando:
 ```bash
 python manage.py runserver
 ```
-and head on to [http://127.0.0.1:8000](http://127.0.0.1:8000) on your browser.
+e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000) no seu navegador.
  
 
-## Usage
-Go to OpenAI and get your [API key](https://platform.openai.com/account/api-keys) then navigate to ```test-gpt/chatbot/.env``` to edit the **```.env```** file and add the API key.
+## Uso
+Vá para OpenAI e obtenha sua [API key](https://platform.openai.com/account/api-keys) após abra o arquivo em ```teste-gpt/chatbot/.env``` e edite o **```.env```** Esse é o arquivo que você deve adicionar sua API Key.
 
 ```python
-API_KEY= #your OpenAI API key.
+API_KEY= #Sua OpenAI API key.
 ```
-or
+ou
 
-Upon successful login, go to **⚙ Settings** on the account sidebar and update your API key.
-## Contributing
+Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da conta e atualize sua API Key.
+## Contribuindo
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change. I am open to collaboration on the same issue or other Python - AI projects.
+Solicitações pull são bem-vindas. Para mudanças importantes, abra primeiro uma edição para discutir o que você gostaria de mudar. Estou aberto à colaboração no mesmo assunto ou em outros projetos Python - AI.
 
-Please make sure to update tests as appropriate.
+Certifique-se de atualizar os testes conforme apropriado.
 
-For more information regarding the API used, read [this](https://platform.openai.com/docs/api-reference).
+Para obter mais informações sobre a API usada, leia [isto](https://platform.openai.com/docs/api-reference).
