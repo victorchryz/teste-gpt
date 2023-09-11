@@ -66,22 +66,50 @@ ou
 python manage.py migrate
 ```
 
-5. Execute o servidor local usando:
+## Uso
+
+1. Gerando Django SECRET_KEY:
+
+Quanto à chave SECRET_KEY no Django, ela é usada para criptografar e proteger informações sensíveis, como cookies e senhas. Essa chave é usada para garantir a segurança do seu aplicativo Django.
+
+A chave SECRET_KEY é uma sequência de caracteres aleatórios e exclusivos que você deve gerar e manter em sigilo.
+
+É importante manter sua chave SECRET_KEY em segredo e não compartilhá-la publicamente. Recomenda-se armazenar a chave em uma variável de ambiente ou em um arquivo separado que não seja controlado pelo sistema de controle de versão, como o Git.
+
+Para gerar uma chave SECRET_KEY no Django, você pode usar uma função de geração de chave aleatória fornecida pelo próprio framework.
+
+Você pode executar o seguinte comando no terminal para gerar uma nova chave SECRET_KEY:
+
+```bash
+python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+```
+
+Isso irá gerar uma chave aleatória e exibi-la no terminal. Copie essa chave gerada.
+
+Você pode definir a chave SECRET_KEY no arquivo de configuração chatbot/.env do seu projeto. Localize a linha que contém a definição da chave SECRET_KEY e substitua o valor atual pela nova chave gerada. Por exemplo:
+
+```bash
+SECRET_KEY = "nova_SECRET_KEY_gerada"
+```
+
+Certifique-se de substituir 'nova_chave_gerada' pela chave que você gerou anteriormente.
+
+2. Vá para OpenAI e obtenha sua [API key](https://platform.openai.com/account/api-keys) após abra o arquivo em ```teste-gpt/chatbot/.env``` e edite o **```.env```** Esse é o arquivo que você deve adicionar sua API Key.
+
+
+```python
+OPENAI_API_KEY = "sua_OPENAI_KEY_Aqui"
+```
+ou
+
+Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da sua conta e atualize sua API Key.
+
+3. Execute o servidor local usando:
 
 ```bash
 python manage.py runserver
 ```
 e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000) no seu navegador.
- 
-## Uso
-Vá para OpenAI e obtenha sua [API key](https://platform.openai.com/account/api-keys) após abra o arquivo em ```teste-gpt/chatbot/.env``` e edite o **```.env```** Esse é o arquivo que você deve adicionar sua API Key.
-
-```python
-API_KEY= #Sua OpenAI API key.
-```
-ou
-
-Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da sua conta e atualize sua API Key.
 
 ## Contribuição
 Contribuições são bem-vindas! Se você tiver sugestões, correções de bugs ou melhorias para este projeto, fique à vontade para abrir uma issue ou enviar um pull request.
