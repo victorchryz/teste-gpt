@@ -56,14 +56,15 @@ pip install --upgrade --no-cache-dir -r requirements.txt
 ```
 
 4.  Faça migrações executando:
+
 ```bash
-python manage.py makemigrations
+python manage.py migrate
 ```
 
 ou
 
 ```bash
-python manage.py migrate
+python manage.py makemigrations
 ```
 
 ## Uso
@@ -89,7 +90,7 @@ Isso irá gerar uma chave aleatória e exibi-la no terminal. Copie essa chave ge
 Você pode definir a chave SECRET_KEY no arquivo de configuração chatbot/.env do seu projeto. Localize a linha que contém a definição da chave SECRET_KEY e substitua o valor atual pela nova chave gerada. Por exemplo:
 
 ```bash
-SECRET_KEY = "nova_SECRET_KEY_gerada"
+SECRET_KEY=nova_SECRET_KEY_gerada
 ```
 
 Certifique-se de substituir 'nova_chave_gerada' pela chave que você gerou anteriormente.
@@ -98,7 +99,7 @@ Certifique-se de substituir 'nova_chave_gerada' pela chave que você gerou anter
 
 
 ```python
-OPENAI_API_KEY = "sua_OPENAI_KEY_Aqui"
+OPENAI_API_KEY=sua_OPENAI_KEY_Aqui
 ```
 ou
 
