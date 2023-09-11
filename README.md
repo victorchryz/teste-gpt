@@ -63,7 +63,7 @@ API_KEY= #Sua OpenAI API key.
 ```
 ou
 
-Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da conta e atualize sua API Key.
+Após o login bem-sucedido, vá em **⚙ Configurações** na barra lateral da sua conta e atualize sua API Key.
 
 ## Contribuição
 Contribuições são bem-vindas! Se você tiver sugestões, correções de bugs ou melhorias para este projeto, fique à vontade para abrir uma issue ou enviar um pull request.
